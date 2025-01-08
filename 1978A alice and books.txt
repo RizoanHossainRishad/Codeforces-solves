@@ -1,0 +1,28 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+    int main(){
+        int test;
+        cin>>test;
+        while(test--){
+            int n;
+            cin>>n;
+            vector<int> page;
+            for(int i=0;i<n;i++){
+                int p;
+                cin>>p;
+                page.push_back(p);
+            }
+
+/*2 2 3 2 2 suppose ei test case er jonne 2 ta split holo 2 2 ar 3 2 2 . amra kintu prottekta boi numbering korbo . jemon 2 2 split e 1 ,2 number then 3 2 2 split e 3 holo 1 number , 2 holo 2 number and last 2 ta holo 3 number boi. to eta mone rakhte hobe je numbering ti diye priority type bujhay . jei boi er numbering joto beshi oi boi er priority shobcheye beshi to ei idea te last element ta shobshomoy alice porbei . and ei last n-1th boi er sathe emon ekta boi porte hobe jate amar numberofpages read maximum hoy . so kinda like amra last element take select kore binary linear search er moton prottekta index oi last element er sathe jog kore kore agabo dekhbo kon sum ta shobcheye maximum . oitai ans*/
+                    int ans=0;
+            for(int i=0; i<n-1; ++i)
+            {
+                int p=page[i]+page[n-1];
+                ans=max(ans,p);
+            }
+            cout<<ans<<endl;
+
+        }
+    }
